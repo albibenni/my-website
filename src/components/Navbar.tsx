@@ -7,7 +7,7 @@ import { close, logo, menu } from '@/assets';
 import { navLinks } from '@/constants';
 
 export default function Navbar() {
-  const [acive, setActive] = useState<string>('');
+  const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(true);
   return (
     <nav
@@ -32,7 +32,7 @@ export default function Navbar() {
             <li
               key={link.id}
               className={`${
-                acive === link.title ? 'text-white' : 'text-secondary'
+                active === link.title ? 'text-white' : 'text-secondary'
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
@@ -59,7 +59,7 @@ export default function Navbar() {
               <li
                 key={link.id}
                 className={`${
-                  acive === link.title ? 'text-white' : 'text-secondary'
+                  active === link.title ? 'text-white' : 'text-secondary'
                 } font-poppins font-medium text-[16px] cursor-pointer`}
                 onClick={() => {
                   setToggle(prevState => !prevState);
