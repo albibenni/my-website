@@ -1,12 +1,37 @@
 'use client';
-import { extend, Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
+import { Canvas, extend } from '@react-three/fiber';
+import React, { Suspense, useEffect, useState } from 'react';
 import CanvasLoader from '@/components/Loader';
 import { OrbitControls, Preload } from '@react-three/drei';
 import Computers from '@/components/canvas/Computers';
+
 extend({ OrbitControls, Canvas });
 
 export default function ComputerCanvas() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event: {
+      matches: boolean | ((prevState: boolean) => boolean);
+    }) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
   return (
     <Canvas
       frameloop="demand"
@@ -20,7 +45,7 @@ export default function ComputerCanvas() {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers />
+        <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>
