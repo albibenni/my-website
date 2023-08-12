@@ -24,8 +24,8 @@ export default function Hero() {
             enjoy trying new tech.
           </p>
         </div>
-        <ComputerCanvas />
       </div>
+      <ComputerCanvas />
     </section>
   );
 }
