@@ -23,8 +23,9 @@ export default function Navbar() {
           }}
         >
           <Image src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold object-contain cursor-pointer">
-            Alberto <span className="sm:block hidden">| Software Engineer</span>
+          <p className="text-white text-[18px] font-bold object-contain cursor-pointer flex">
+            Alberto &nbsp;
+            <span className="sm:block hidden">| Software Engineer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
