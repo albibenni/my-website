@@ -1,6 +1,6 @@
 import React from 'react';
 import { styles } from '@/app/styles';
-import { ComputersCanvas } from '@/components/canvas';
+import ComputerCanvas from '@/components/canvas/ComputerCanvas';
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
             enjoy trying new tech.
           </p>
         </div>
-        <ComputersCanvas />
+        <ComputerCanvas />
       </div>
     </section>
   );
