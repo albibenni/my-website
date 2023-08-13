@@ -14,6 +14,9 @@ export default function About() {
     "Let's work together to bring your ideas to life!";
   return (
     <>
+      <span className="hash-span" id={'about'}>
+        &nbsp;
+      </span>
       <motion.div variants={textVariant(0)}>
         <p className={styles.sectionSubText}>Introduction</p>
         <p className={styles.sectionHeadText}>Overview </p>
