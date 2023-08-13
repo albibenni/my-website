@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/utils/motion';
 import { Tilt } from 'react-tilt';
 import Image, { StaticImageData } from 'next/image';
-//    "react-tilt": "^0.1.4",
 
 interface ServiceCardProps {
   index: number;
