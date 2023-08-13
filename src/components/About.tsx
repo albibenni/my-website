@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { fadeIn, textVariant } from '@/utils/motion';
-import { services } from '@/constants';
+import { services } from '@/constants/recap';
 import ServiceCard from '@/components/ServiceCard';
 
 export default function About() {

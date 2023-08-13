@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import SectionWrapper from '@/components/SectionWrapper';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
         <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
-            <div>{children}</div>
+            <SectionWrapper>{children}</SectionWrapper>
           </div>
         </div>
       </body>

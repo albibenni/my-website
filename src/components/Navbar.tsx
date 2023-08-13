@@ -4,11 +4,14 @@ import { styles } from '@/app/styles';
 import Link from 'next/link';
 import Image from 'next/image';
 import { close, logo, menu } from '@/assets';
-import { navLinks } from '@/constants';
+import { navLinks } from '@/constants/recap';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(true);
+  const router = useRouter();
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
@@ -35,9 +38,12 @@ export default function Navbar() {
               className={`${
                 active === link.title ? 'text-white' : 'text-secondary'
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                router.push(`#${link.id}`);
+              }}
             >
-              <a href={`#${link.id}`}> {link.title} </a>
+              <a> {link.title} </a>
             </li>
           ))}
         </ul>
@@ -65,9 +71,10 @@ export default function Navbar() {
                 onClick={() => {
                   setToggle(prevState => !prevState);
                   setActive(link.title);
+                  router.push(`#${link.id}`);
                 }}
               >
-                <a href={`#${link.id}`}> {link.title} </a>
+                <a> {link.title} </a>
               </li>
             ))}
           </ul>

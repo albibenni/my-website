@@ -1,31 +1,34 @@
 'use client';
-import React, { ReactNode } from 'react';
+import React, { Component, ReactNode, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '@/utils/motion';
 import { styles } from '@/app/styles';
-import { ParsedUrlQuery } from 'querystring';
+import { useParams } from 'next/navigation';
 
 interface SectionWrapperProps {
   children: ReactNode;
-  id: ParsedUrlQuery;
 }
 
-export default function SectionWrapper({
-  children,
-  id,
-}: SectionWrapperProps): JSX.Element {
+export default function SectionWrapper({ children }: SectionWrapperProps) {
   // const path = usePathname();
-  console.log(id);
+  const params = useParams();
+  const [anchor, setAnchor] = useState('');
+
+  useEffect(() => {
+    setAnchor(window.location.hash);
+  }, [params]);
 
   return (
     <motion.section
-      variants={staggerContainer(children, 0)}
+      variants={staggerContainer(Component, 0)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
-      <span className="hash-span">&nbsp;</span>
+      <span className="hash-span" id={anchor}>
+        &nbsp;
+      </span>
       {children}
     </motion.section>
   );
