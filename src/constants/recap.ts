@@ -123,7 +123,6 @@ export type Experience = {
   points: string[];
 };
 
-//todo: add experience
 const experiences: Experience[] = [
   {
     title: 'Full Stack Developer',
