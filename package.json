@@ -9,13 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.4.9",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.13",
     "@emailjs/browser": "^3.10.0",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",
+    "autoprefixer": "10.4.13",
     "framer-motion": "^9.0.7",
     "maath": "^0.5.2",
     "next": "13.4.13",
@@ -30,9 +27,13 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/three": "^0.149.0",
+    "@types/node": "20.4.9",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@types/three": "^0.149.0",
     "eslint": "^8.46.0",
     "eslint-config-next": "13.4.13",
     "eslint-config-prettier": "^8.10.0",
