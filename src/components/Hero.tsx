@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import ComputerCanvas from '@/components/canvas/ComputerCanvas';
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
