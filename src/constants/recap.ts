@@ -156,7 +156,7 @@ const experiences: Experience[] = [
     company_name: 'Forge',
     icon: forge,
     iconBg: '#fff',
-    date: 'Jan 2022 - Jan 2023',
+    date: 'Sept 2019 - Jan 2020',
     points: [
       'Web App build from scratch to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.',
       'Built using NodeJS for the backend to store the data on a MongoDB and plain JavaScript for the front end where the Google APIs were used to draw the map and make the calculations alongside some CSS styling for the HTML.',
