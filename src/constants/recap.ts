@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
 } from '../assets';
+import { StaticImageData } from 'next/image';
 
 export const navLinks = [
   {
@@ -114,9 +115,18 @@ const technologies = [
   },
 ];
 
-const experiences = [
+export type Experience = {
+  title: string;
+  company_name: string;
+  icon: StaticImageData;
+  iconBg: string;
+  date: string;
+  points: string[];
+};
+
+const experiences: Experience[] = [
   {
-    title: 'React.js Developer',
+    title: 'Full Stack Developer',
     company_name: 'Starbucks',
     icon: starbucks,
     iconBg: '#383E56',
@@ -129,7 +139,7 @@ const experiences = [
     ],
   },
   {
-    title: 'React Native Developer',
+    title: 'Full Stack Developer',
     company_name: 'Tesla',
     icon: tesla,
     iconBg: '#E6DEDD',
