@@ -5,7 +5,7 @@ import {
   web,
   javascript,
   typescript,
-  html,
+  nextjs,
   css,
   reactjs,
   redux,
@@ -13,7 +13,6 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
   deda2,
   carrent,
@@ -22,6 +21,7 @@ import {
   threejs,
   intesa,
   forge,
+  java,
 } from '../assets';
 import { StaticImageData } from 'next/image';
 
@@ -59,38 +59,42 @@ const services = [
   },
 ];
 
-const technologies = [
+export type Technology = {
+  name: string;
+  icon: StaticImageData;
+};
+const technologies: Technology[] = [
   {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
+    name: 'React JS',
+    icon: reactjs,
   },
   {
     name: 'TypeScript',
     icon: typescript,
   },
   {
-    name: 'React JS',
-    icon: reactjs,
+    name: 'Node JS',
+    icon: nodejs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
+    name: 'JavaScript',
+    icon: javascript,
   },
   {
     name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
+    name: 'NextJS',
+    icon: nextjs,
+  },
+  {
+    name: 'CSS 3',
+    icon: css,
+  },
+  {
+    name: 'Redux Toolkit',
+    icon: redux,
   },
   {
     name: 'MongoDB',
@@ -105,8 +109,8 @@ const technologies = [
     icon: git,
   },
   {
-    name: 'figma',
-    icon: figma,
+    name: 'Java',
+    icon: java,
   },
   {
     name: 'docker',
