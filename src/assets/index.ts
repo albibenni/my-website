@@ -26,7 +26,7 @@ import deda2 from './company/deda2.png';
 import intesa from './company/intesa.png';
 import forge from './company/forge.png';
 
-import carrent from './carrent.png';
+import treeWebsite from './tree-website.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
@@ -56,7 +56,7 @@ export {
   deda2,
   intesa,
   forge,
-  carrent,
+  treeWebsite,
   jobit,
   tripguide,
 };

@@ -15,13 +15,13 @@ import {
   git,
   docker,
   deda2,
-  carrent,
   jobit,
   tripguide,
   threejs,
   intesa,
   forge,
   java,
+  treeWebsite,
 } from '../assets';
 import { StaticImageData } from 'next/image';
 
@@ -204,31 +204,27 @@ export type Project = {
   name: string;
   description: string;
   tags: TechAndColor[];
-  image: StaticImageData;
+  image: StaticImageData | undefined;
   source_code_link: string;
 };
 
 const projects: Project[] = [
   {
-    name: 'Car Rent',
+    name: 'Web Site',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Web-site you are currently watching to practice 3D developing and showcase my portfolio CV.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
         name: 'tailwind',
         color: 'pink-text-gradient',
       },
     ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
+    image: treeWebsite,
+    source_code_link: 'https://github.com/albibenni/tree-js-website',
   },
   {
     name: 'Job IT',
