@@ -195,7 +195,20 @@ const testimonials = [
   },
 ];
 
-const projects = [
+type TechAndColor = {
+  name: string;
+  color: string;
+};
+
+export type Project = {
+  name: string;
+  description: string;
+  tags: TechAndColor[];
+  image: StaticImageData;
+  source_code_link: string;
+};
+
+const projects: Project[] = [
   {
     name: 'Car Rent',
     description:
