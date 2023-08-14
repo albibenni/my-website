@@ -31,6 +31,9 @@ export default function Ball({ icon }: BallProps) {
         <Decal
           position={[0, 0, 1]}
           map={decal}
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          flatShading
           rotation={[2 * Math.PI, 0, 6.25]}
         />
       </mesh>
