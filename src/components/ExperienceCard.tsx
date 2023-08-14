@@ -17,7 +17,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         date={experience.date}
         iconStyle={{ background: experience.iconBg }}
         icon={
-          <div>
+          <div className="flex justify-center items-center w-full h-full">
             <Image
               src={experience.icon}
               alt={experience.company_name}
@@ -26,7 +26,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           </div>
         }
       >
-        <div className="flex justify-center  items-center w-full h-full">
+        <div>
           <h3 className="text-white text-[24px] font-bold">
             {experience.title}
           </h3>
