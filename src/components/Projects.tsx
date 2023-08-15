@@ -8,7 +8,7 @@ import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
   const description = `The following projects demonstrate my love for building applications and test my skills with new technologies.
-   Each project is briefly described with links to code repositories.`;
+   Each project is briefly described with links to its code repositories.`;
   return (
     <>
       <span className="hash-span" id={'projects'}>
