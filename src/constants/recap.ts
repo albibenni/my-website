@@ -15,13 +15,13 @@ import {
   git,
   docker,
   deda2,
-  jobit,
-  tripguide,
   threejs,
   intesa,
   forge,
   java,
   treeWebsite,
+  coverage,
+  exLibris,
 } from '../assets';
 import { StaticImageData } from 'next/image';
 
@@ -227,47 +227,64 @@ const projects: Project[] = [
     source_code_link: 'https://github.com/albibenni/tree-js-website',
   },
   {
-    name: 'Job IT',
+    name: 'ExLibris',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'Backend Book Library template with Oauth token and roles for book rental.',
     tags: [
       {
-        name: 'react',
+        name: 'nodeJS',
         color: 'blue-text-gradient',
+      },
+      {
+        name: 'nest',
+        color: 'red-text-gradient',
+      },
+      {
+        name: 'mongoDB',
+        color: 'green-text-gradient',
       },
       {
         name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
+        color: 'blue-text-gradient',
       },
     ],
-    image: jobit,
-    source_code_link: 'https://github.com/',
+    image: exLibris,
+    source_code_link: 'https://github.com/albibenni/ExLibris',
   },
   {
-    name: 'Trip Guide',
+    name: 'Coverage',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Web App to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'javascript',
+        color: 'yellow-text-gradient',
+      },
+      {
+        name: 'nodeJS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'mongoDB',
         color: 'green-text-gradient',
+      },
+      {
+        name: 'googleAPI',
+        color: 'red-text-gradient',
+      },
+      {
+        name: 'restapi',
+        color: 'blue-text-gradient',
       },
       {
         name: 'css',
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
-    source_code_link: 'https://github.com/',
+    image: coverage,
+    source_code_link: 'https://github.com/albibenni/Coverage',
   },
+  // TODO: add the python amazon project
 ];
 
 export { services, technologies, experiences, testimonials, projects };
