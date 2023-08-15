@@ -21,22 +21,21 @@ export default function About() {
         <p className={styles.sectionSubText}>Introduction</p>
         <p className={styles.sectionHeadText}>Overview </p>
       </motion.div>
-      <motion.div
-        variants={fadeIn('', '', 0.1, 1)}
+      <motion.p
+        // variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         {blockOfText}
-        <br />
-        <p className="text-white font-bold text-[18px]">{workTogether}</p>
-      </motion.div>
+      </motion.p>
+      <motion.p
+        // variants={fadeIn('', '', 0.1, 1)}
+        className="font-bold text-white text-[18px] max-w-3xl leading-[30px]"
+      >
+        {workTogether}
+      </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
-          <ServiceCard
-            key={service.title}
-            title={service.title}
-            index={index}
-            icon={service.icon}
-          />
+          <ServiceCard key={service.title} service={service} index={index} />
         ))}
       </div>
     </>
