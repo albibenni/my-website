@@ -7,7 +7,7 @@ import { projects } from '@/constants/recap';
 import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
-  const description = `Following projects showcase my love to build applications and test our my skills with new technologies.
+  const description = `Following projects showcase my love to build applications and test my skills with new technologies.
    Each project is briefly described with links to code repositories.`;
   return (
     <>
