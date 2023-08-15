@@ -26,7 +26,7 @@ import deda2 from './company/deda2.png';
 import intesa from './company/intesa.png';
 import forge from './company/forge.png';
 
-import treeWebsite from './tree-website.png';
+import treeWebsite from './tree-website.jpg';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
