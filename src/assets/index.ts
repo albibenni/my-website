@@ -27,8 +27,8 @@ import intesa from './company/intesa.png';
 import forge from './company/forge.png';
 
 import treeWebsite from './tree-website.jpg';
-import jobit from './jobit.png';
-import tripguide from './tripguide.png';
+import coverage from './coverage.png';
+import exLibris from './exLibris.png';
 
 export {
   logo,
@@ -57,6 +57,6 @@ export {
   intesa,
   forge,
   treeWebsite,
-  jobit,
-  tripguide,
+  coverage,
+  exLibris,
 };
