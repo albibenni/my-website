@@ -40,7 +40,12 @@ export const navLinks = [
   },
 ];
 
-const services = [
+export type Service = {
+  title: string;
+  icon: StaticImageData;
+};
+
+const services: Service[] = [
   {
     title: 'Web Developer',
     icon: web,
@@ -204,7 +209,7 @@ export type Project = {
   name: string;
   description: string;
   tags: TechAndColor[];
-  image: StaticImageData | undefined;
+  image: StaticImageData;
   source_code_link: string;
 };
 
