@@ -1,10 +1,8 @@
-export const textVariant = (delay: any) => {
+import { Variants } from 'framer-motion';
+
+export const textVariant = (delay: number): Variants => {
   return {
-    hidden: {
-      y: -50,
-      opacity: 0,
-    },
-    show: {
+    visible: {
       y: 0,
       opacity: 1,
       transition: {
@@ -13,22 +11,26 @@ export const textVariant = (delay: any) => {
         delay: delay,
       },
     },
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
   };
 };
 
 export const fadeIn = (
   direction: string,
-  type: any,
-  delay: any,
-  duration: any
-) => {
+  type: string,
+  delay: number,
+  duration: number
+): Variants => {
   return {
     hidden: {
       x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
       y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
       opacity: 0,
     },
-    show: {
+    visible: {
       x: 0,
       y: 0,
       opacity: 1,
@@ -42,13 +44,13 @@ export const fadeIn = (
   };
 };
 
-export const zoomIn = (delay: any, duration: any) => {
+export const zoomIn = (delay: number, duration: number): Variants => {
   return {
     hidden: {
       scale: 0,
       opacity: 0,
     },
-    show: {
+    visible: {
       scale: 1,
       opacity: 1,
       transition: {
@@ -64,15 +66,15 @@ export const zoomIn = (delay: any, duration: any) => {
 export const slideIn = (
   direction: string,
   type: any,
-  delay: any,
-  duration: any
-) => {
+  delay: number,
+  duration: number
+): Variants => {
   return {
     hidden: {
       x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
       y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
     },
-    show: {
+    visible: {
       x: 0,
       y: 0,
       transition: {
@@ -85,10 +87,13 @@ export const slideIn = (
   };
 };
 
-export const staggerContainer = (staggerChildren: any, delayChildren: any) => {
+export const staggerContainer = (
+  staggerChildren: any,
+  delayChildren: number
+): Variants => {
   return {
     hidden: {},
-    show: {
+    visible: {
       transition: {
         staggerChildren: staggerChildren,
         delayChildren: delayChildren || 0,
