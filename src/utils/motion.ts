@@ -65,7 +65,7 @@ export const zoomIn = (delay: number, duration: number): Variants => {
 
 export const slideIn = (
   direction: string,
-  type: any,
+  type: string,
   delay: number,
   duration: number
 ): Variants => {
@@ -88,7 +88,7 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: any,
+  staggerChildren: number,
   delayChildren: number
 ): Variants => {
   return {
