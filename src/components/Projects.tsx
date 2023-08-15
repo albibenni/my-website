@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { projects } from '@/constants/recap';
 import ProjectCard from '@/components/ProjectCard';
+import { textVariant } from '@/utils/motion';
 
 export default function Projects() {
   const description = `The following projects demonstrate my love for building applications and test my skills with new technologies.
@@ -13,10 +14,10 @@ export default function Projects() {
       <span className="hash-span" id={'projects'}>
         &nbsp;
       </span>
-      {/*<motion.div variants={textVariant(0)}>*/}
-      <p className={styles.sectionSubText}>My work</p>
-      <p className={styles.sectionHeadText}>Projects</p>
-      {/*</motion.div>*/}
+      <motion.div initial="hidden" animate="visible" variants={textVariant(0)}>
+        <p className={styles.sectionSubText}>My work</p>
+        <h3 className={styles.sectionHeadText}>Projects</h3>
+      </motion.div>
       <div className="w-full flex">
         <motion.p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
           {description}
