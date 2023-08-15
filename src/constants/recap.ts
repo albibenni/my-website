@@ -147,7 +147,7 @@ const experiences: Experience[] = [
     company_name: 'Perigea - Intesa San Paolo',
     icon: intesa,
     iconBg: '#ff9663',
-    date: 'Sept 2021 - April 2021',
+    date: 'Sept 2021 - April 2022',
     points: [
       'Working on 3 applications for investing analysis.',
       'Working in a four-person team participating from the design to the develop of the application.',
