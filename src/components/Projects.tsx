@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { textVariant } from '@/utils/motion';
 import { styles } from '@/app/styles';
 import { projects } from '@/constants/recap';
 import ProjectCard from '@/components/ProjectCard';
@@ -10,14 +9,14 @@ export default function Projects() {
   const description = `The following projects demonstrate my love for building applications and test my skills with new technologies.
    Each project is briefly described with links to its code repositories.`;
   return (
-    <>
+    <div>
       <span className="hash-span" id={'projects'}>
         &nbsp;
       </span>
-      <motion.div variants={textVariant(0)}>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
-      </motion.div>
+      {/*<motion.div variants={textVariant(0)}>*/}
+      <p className={styles.sectionSubText}>My work</p>
+      <p className={styles.sectionHeadText}>Projects</p>
+      {/*</motion.div>*/}
       <div className="w-full flex">
         <motion.p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
           {description}
@@ -32,6 +31,6 @@ export default function Projects() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

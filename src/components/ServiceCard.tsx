@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '@/utils/motion';
 import { Tilt } from 'react-tilt';
 import Image from 'next/image';
 import { Service } from '@/constants/recap';
@@ -10,6 +8,7 @@ interface ServiceCardProps {
   index: number;
   service: Service;
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function ServiceCard({ index, service }: ServiceCardProps) {
   return (
     <Tilt
@@ -20,10 +19,11 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
       }}
       className="xs:w-[250px] w-full"
     >
-      <motion.div
-        variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-      >
+      <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+        {/*<motion.div*/}
+        {/*  variants={fadeIn('right', 'spring', index * 0.5, 0.75)}*/}
+        {/*  className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"*/}
+        {/*>*/}
         <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
           <Image
             src={service.icon}
@@ -34,7 +34,7 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
             {service.title}
           </h3>
         </div>
-      </motion.div>
+      </div>
     </Tilt>
   );
 }

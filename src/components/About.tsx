@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
-import { fadeIn, textVariant } from '@/utils/motion';
 import { services } from '@/constants/recap';
 import ServiceCard from '@/components/ServiceCard';
 
@@ -13,24 +12,18 @@ export default function About() {
     "          Spring. I'm a quick learner and I enjoy learning new thing to improve my abilities.";
   const workTogether = `Let's work together to bring your ideas to life!`;
   return (
-    <>
+    <div>
       <span className="hash-span" id={'about'}>
         &nbsp;
       </span>
-      <motion.div variants={textVariant(0)}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <p className={styles.sectionHeadText}>Overview </p>
-      </motion.div>
-      <motion.p
-        // variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
+      {/*<motion.div variants={textVariant(0)}>*/}
+      <p className={styles.sectionSubText}>Introduction</p>
+      <p className={styles.sectionHeadText}>Overview</p>
+      {/*</motion.div>*/}
+      <motion.p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
         {blockOfText}
       </motion.p>
-      <motion.p
-        // variants={fadeIn('', '', 0.1, 1)}
-        className="font-bold text-white text-[18px] max-w-3xl leading-[30px]"
-      >
+      <motion.p className="font-bold text-white text-[18px] max-w-3xl leading-[30px]">
         {workTogether}
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
@@ -38,6 +31,6 @@ export default function About() {
           <ServiceCard key={service.title} service={service} index={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
