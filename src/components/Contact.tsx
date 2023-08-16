@@ -3,6 +3,8 @@ import React, { ChangeEvent, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { slideIn } from '@/utils/motion';
+import Earth from '@/components/canvas/Earth';
+import EarthCanvas from '@/components/canvas/EarthCanvas';
 
 type Form = {
   name: string;
@@ -92,6 +94,14 @@ export default function Contact() {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={slideIn('right', 'tween', 0.2, 1)}
+        className="xl:flex-[1] xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   );
