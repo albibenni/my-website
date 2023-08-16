@@ -21,7 +21,8 @@ export default function Stars() {
   });
 
   return (
-    <group>
+    // eslint-disable-next-line react/no-unknown-property
+    <group rotation={[0, 0, Math.PI / 4]}>
       <Points
         ref={ref}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
