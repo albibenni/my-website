@@ -3,6 +3,7 @@ import React, { ChangeEvent, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { slideIn } from '@/utils/motion';
+import emailjs from '@emailjs/browser';
 import EarthCanvas from '@/components/canvas/EarthCanvas';
 
 type Form = {
@@ -14,11 +15,49 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<Form>({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
+  // template id:
+  // template_rrzhk0l
+  // service id:
+  // service_14ahgac
+  // emailJS pubkey:
+  // EvWfF5ddosV2NBBY3
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setLoading(true);
-    // setForm(e.currentTarget.form);
+    emailjs
+      .send(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: 'JavaScript Mastery',
+          from_email: form.email,
+          to_email: 'sujata@jsmastery.pro',
+          message: form.message,
+        },
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Thank you. I will get back to you as soon as possible.');
+
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        error => {
+          setLoading(false);
+          console.error(error);
+
+          alert('Ahh, something went wrong. Please try again.');
+        }
+      );
   };
 
   const handleChange = (
