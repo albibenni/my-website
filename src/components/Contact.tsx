@@ -1,5 +1,5 @@
 'use client';
-import React, { ChangeEvent, SyntheticEvent, useRef, useState } from 'react';
+import React, { ChangeEvent, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { slideIn } from '@/utils/motion';
