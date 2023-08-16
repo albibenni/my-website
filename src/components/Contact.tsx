@@ -3,7 +3,6 @@ import React, { ChangeEvent, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '@/app/styles';
 import { slideIn } from '@/utils/motion';
-import Earth from '@/components/canvas/Earth';
 import EarthCanvas from '@/components/canvas/EarthCanvas';
 
 type Form = {
