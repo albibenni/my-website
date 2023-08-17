@@ -15,12 +15,6 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<Form>({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
-  // template id:
-  // template_rrzhk0l
-  // service id:
-  // service_14ahgac
-  // emailJS pubkey:
-  // EvWfF5ddosV2NBBY3
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
