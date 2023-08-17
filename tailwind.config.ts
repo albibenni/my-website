@@ -10,12 +10,6 @@ const config: Config = {
   mode: 'jit',
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-pattern': "url('/src/assets/herobg.png')",
-        // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        // 'gradient-conic':
-        //   'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
         primary: '#050816',
         secondary: '#aaa6c3',
@@ -29,6 +23,9 @@ const config: Config = {
       },
       screens: {
         xs: '450px',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/public/herobg.png')",
       },
     },
   },
