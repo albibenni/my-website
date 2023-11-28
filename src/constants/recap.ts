@@ -1,5 +1,4 @@
 import {
-  mobile,
   backend,
   creator,
   web,
@@ -25,14 +24,19 @@ import {
 } from '../assets';
 import { StaticImageData } from 'next/image';
 
-export const navLinks = [
+export type NavLinks = {
+  id: string;
+  title: string;
+};
+
+export const navLinks: NavLinks[] = [
+  {
+    id: 'posts',
+    title: 'Posts',
+  },
   {
     id: 'about',
     title: 'About',
-  },
-  {
-    id: 'work',
-    title: 'Work',
   },
   {
     id: 'contact',
@@ -50,16 +54,16 @@ const services: Service[] = [
     title: 'Web Developer',
     icon: web,
   },
-  {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
+  // {
+  //   title: 'React Native Developer',
+  //   icon: mobile,
+  // },
   {
     title: 'Backend Developer',
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: 'Full Stack developer',
     icon: creator,
   },
 ];

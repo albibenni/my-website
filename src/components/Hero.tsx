@@ -6,7 +6,7 @@ import ComputerCanvas from '@/components/canvas/ComputerCanvas';
 
 export default function Hero(): JSX.Element {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen px-auto">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto 
         flex flex-row items-start gap-5`}
@@ -27,11 +27,11 @@ export default function Hero(): JSX.Element {
           </p>
         </div>
       </div>
-      <ComputerCanvas />
+      {/* <ComputerCanvas /> */}
       {/*TODO xs:bottom-8 bottom-16 weird outcome -- tailwind css*/}
-      <div className="absolute xs:bottom-8 bottom-16 w-full flex justify-center items-center ">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+      {/* <div className="absolute xs:bottom-8 bottom-16 w-full flex justify-center items-center "> */}
+        {/* <a href="#about"> */}
+          {/* <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -43,9 +43,9 @@ export default function Hero(): JSX.Element {
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
-          </div>
-        </a>
-      </div>
+          </div> */}
+        {/* </a> */}
+      {/* </div> */}
     </section>
   );
 }
