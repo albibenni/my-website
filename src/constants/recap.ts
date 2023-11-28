@@ -32,12 +32,12 @@ export type NavLinks = {
 
 export const navLinks: NavLinks[] = [
   {
-    id: 'about',
-    title: 'About',
+    id: 'posts',
+    title: 'Posts',
   },
   {
-    id: 'work',
-    title: 'Work',
+    id: 'about',
+    title: 'About',
   },
   {
     id: 'contact',
