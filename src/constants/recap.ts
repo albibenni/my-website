@@ -1,5 +1,4 @@
 import {
-  mobile,
   backend,
   creator,
   web,
@@ -55,16 +54,16 @@ const services: Service[] = [
     title: 'Web Developer',
     icon: web,
   },
-  {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
+  // {
+  //   title: 'React Native Developer',
+  //   icon: mobile,
+  // },
   {
     title: 'Backend Developer',
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: 'Full Stack developer',
     icon: creator,
   },
 ];

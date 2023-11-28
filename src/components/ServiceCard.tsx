@@ -20,7 +20,6 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           //eslint-disable-next-line react/no-unknown-property
           options={{
