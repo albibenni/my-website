@@ -1,11 +1,11 @@
 "use client";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { styles } from "@/app/styles";
 import { motion } from "framer-motion";
 import ExperienceCard from "@/components/ExperienceCard";
 import { experiences } from "@/constants/recap";
 import { textVariant } from "@/utils/motion";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 export default function Experience() {
   const subText = "What I've done so far";
