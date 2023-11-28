@@ -25,7 +25,12 @@ import {
 } from '../assets';
 import { StaticImageData } from 'next/image';
 
-export const navLinks = [
+export type NavLinks = {
+  id: string;
+  title: string;
+};
+
+export const navLinks: NavLinks[] = [
   {
     id: 'about',
     title: 'About',
