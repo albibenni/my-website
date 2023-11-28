@@ -1,17 +1,16 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { styles } from '@/app/styles';
-import { projects } from '@/constants/recap';
-import ProjectCard from '@/components/ProjectCard';
-import { textVariant } from '@/utils/motion';
+"use client";
+import { motion } from "framer-motion";
+import { styles } from "@/app/styles";
+import { projects } from "@/constants/recap";
+import ProjectCard from "@/components/ProjectCard";
+import { textVariant } from "@/utils/motion";
 
 export default function Projects() {
   const description = `The following projects demonstrate my love for building applications and test my skills with new technologies.
    Each project is briefly described with links to its code repositories.`;
   return (
     <div>
-      <span className="hash-span" id={'projects'}>
+      <span className="hash-span" id={"projects"}>
         &nbsp;
       </span>
       <motion.div initial="hidden" animate="visible" variants={textVariant(0)}>

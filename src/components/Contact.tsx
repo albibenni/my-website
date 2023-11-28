@@ -1,10 +1,10 @@
-'use client';
-import React, { ChangeEvent, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { styles } from '@/app/styles';
-import { slideIn } from '@/utils/motion';
-import emailjs from '@emailjs/browser';
-import EarthCanvas from '@/components/canvas/EarthCanvas';
+"use client";
+import { ChangeEvent, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { styles } from "@/app/styles";
+import { slideIn } from "@/utils/motion";
+import emailjs from "@emailjs/browser";
+import EarthCanvas from "@/components/canvas/EarthCanvas";
 
 type Form = {
   name: string;
@@ -13,7 +13,7 @@ type Form = {
 };
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [form, setForm] = useState<Form>({ name: '', email: '', message: '' });
+  const [form, setForm] = useState<Form>({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -21,15 +21,14 @@ export default function Contact() {
     setLoading(true);
     emailjs
       .send(
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         process.env.EMAILJS_SERVICE_ID,
         process.env.EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: 'JavaScript Mastery',
+          to_name: "Alberto Benatti",
           from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
+          to_email: "contact@albertobenatti.com",
           message: form.message,
         },
         process.env.EMAILJS_PUBLIC_KEY
@@ -37,19 +36,19 @@ export default function Contact() {
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
           });
         },
-        error => {
+        (error) => {
           setLoading(false);
           console.error(error);
 
-          alert('Ahh, something went wrong. Please try again.');
+          alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -58,7 +57,7 @@ export default function Contact() {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { value, name } = e.target;
-    setForm(prevState => ({
+    setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -66,22 +65,20 @@ export default function Contact() {
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <span className="hash-span" id={'about'}>
+      <span className="hash-span" id={"about"}>
         &nbsp;
       </span>
 
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={slideIn('left', 'tween', 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in Touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
-        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
         <form
           ref={formRef}
-          //eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col"
@@ -123,14 +120,14 @@ export default function Contact() {
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={slideIn('right', 'tween', 0.2, 1)}
+        variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-[1] xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />

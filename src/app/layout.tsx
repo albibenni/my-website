@@ -8,8 +8,9 @@ import SectionWrapper from '@/components/SectionWrapper';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://albertobenatti.com'),
   title: 'Alberto Benatti',
-  description: 'My portfolio website',
+  description: 'full stack developer typescript react nodejs articles blog',
 };
 
 export default function RootLayout({

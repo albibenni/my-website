@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import { Project } from '@/constants/recap';
-import { Tilt } from 'react-tilt';
-import { github } from '@/assets';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeIn } from '@/utils/motion';
+"use client";
+import { Project } from "@/constants/recap";
+import { Tilt } from "react-tilt";
+import { github } from "@/assets";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface ProjectCardProps {
   index: number;
@@ -21,7 +20,7 @@ export default function ProjectCard({ index, project }: ProjectCardProps) {
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       >
         <div className="relative w-full h-[230px]">
           <Image
@@ -31,7 +30,7 @@ export default function ProjectCard({ index, project }: ProjectCardProps) {
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(project.source_code_link, '_blank')}
+              onClick={() => window.open(project.source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex cursor-pointer items-center justify-center"
             >
               <Image
@@ -49,7 +48,7 @@ export default function ProjectCard({ index, project }: ProjectCardProps) {
           </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          {project.tags.map(tag => (
+          {project.tags.map((tag) => (
             <p
               key={`${project.name}-${tag.name}`}
               className={`text-[14px] ${tag.color}`}

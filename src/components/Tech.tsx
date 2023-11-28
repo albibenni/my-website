@@ -1,12 +1,11 @@
-'use client';
-import React from 'react';
-import { technologies } from '@/constants/recap';
-import BallCanvas from '@/components/canvas/BallCanvas';
+"use client";
+import { technologies } from "@/constants/recap";
+import BallCanvas from "@/components/canvas/BallCanvas";
 
 export default function Tech() {
   return (
     <>
-      <span className="hash-span" id={'technologies'}>
+      <span className="hash-span" id={"technologies"}>
         &nbsp;
       </span>
       <div className="flex flex-row flex-wrap justify-center gap-10">

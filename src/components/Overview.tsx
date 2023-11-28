@@ -1,20 +1,19 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { styles } from '@/app/styles';
-import { services } from '@/constants/recap';
-import ServiceCard from '@/components/ServiceCard';
-import { textVariant } from '@/utils/motion';
+"use client";
+import { motion } from "framer-motion";
+import { styles } from "@/app/styles";
+import { services } from "@/constants/recap";
+import ServiceCard from "@/components/ServiceCard";
+import { textVariant } from "@/utils/motion";
 
 export default function Overview() {
   const blockOfText =
     "I'm a software engineer with experience in TypeScript,\n" +
-    '          JavaScript and Java and expertise in frameworks like React, Node.js, and\n' +
+    "          JavaScript and Java and expertise in frameworks like React, Node.js, and\n" +
     "          Spring. I'm a quick learner and I enjoy learning new thing to improve my skills.";
   const workTogether = `Let's work together to bring your ideas to life!`;
   return (
     <div>
-      <span className="hash-span" id={'overview'}>
+      <span className="hash-span" id={"overview"}>
         &nbsp;
       </span>
       <motion.div initial="hidden" animate="visible" variants={textVariant(0)}>

@@ -1,6 +1,5 @@
-'use client';
-import React from 'react';
-import { Html, useProgress } from '@react-three/drei';
+"use client";
+import { Html, useProgress } from "@react-three/drei";
 
 export default function Loader() {
   const { progress } = useProgress();
@@ -10,7 +9,7 @@ export default function Loader() {
       <p
         style={{
           fontSize: 14,
-          color: '#f1f1f1',
+          color: "#f1f1f1",
           fontWeight: 800,
           marginTop: 40,
         }}

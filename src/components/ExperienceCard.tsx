@@ -1,9 +1,8 @@
-'use client';
-import React from 'react';
-import 'react-vertical-timeline-component/style.min.css';
-import { Experience } from '@/constants/recap';
-import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import Image from 'next/image';
+"use client";
+import "react-vertical-timeline-component/style.min.css";
+import { Experience } from "@/constants/recap";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import Image from "next/image";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -12,8 +11,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <>
       <VerticalTimelineElement
-        contentStyle={{ background: '#1d1836', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid #232621' }}
+        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
         date={experience.date}
         iconStyle={{ background: experience.iconBg }}
         icon={

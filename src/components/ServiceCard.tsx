@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import Image from 'next/image';
-import { Service } from '@/constants/recap';
-import { motion } from 'framer-motion';
-import { fadeIn } from '@/utils/motion';
+"use client";
+import { Tilt } from "react-tilt";
+import Image from "next/image";
+import { Service } from "@/constants/recap";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface ServiceCardProps {
   index: number;
@@ -16,7 +15,7 @@ export default function ServiceCard({ index, service }: ServiceCardProps) {
       <motion.div
         initial="hidden"
         animate="visible"
-        variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div

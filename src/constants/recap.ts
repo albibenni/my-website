@@ -21,8 +21,8 @@ import {
   treeWebsite,
   coverage,
   exLibris,
-} from '../assets';
-import { StaticImageData } from 'next/image';
+} from "../assets";
+import { StaticImageData } from "next/image";
 
 export type NavLinks = {
   id: string;
@@ -31,16 +31,16 @@ export type NavLinks = {
 
 export const navLinks: NavLinks[] = [
   {
-    id: 'posts',
-    title: 'Posts',
+    id: "posts",
+    title: "Posts",
   },
   {
-    id: 'about',
-    title: 'About',
+    id: "about",
+    title: "About",
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: "contact",
+    title: "Contact",
   },
 ];
 
@@ -51,7 +51,7 @@ export type Service = {
 
 const services: Service[] = [
   {
-    title: 'Web Developer',
+    title: "Web Developer",
     icon: web,
   },
   // {
@@ -59,11 +59,11 @@ const services: Service[] = [
   //   icon: mobile,
   // },
   {
-    title: 'Backend Developer',
+    title: "Backend Developer",
     icon: backend,
   },
   {
-    title: 'Full Stack developer',
+    title: "Full Stack developer",
     icon: creator,
   },
 ];
@@ -74,55 +74,55 @@ export type Technology = {
 };
 const technologies: Technology[] = [
   {
-    name: 'React JS',
+    name: "React JS",
     icon: reactjs,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     icon: typescript,
   },
   {
-    name: 'Node JS',
+    name: "Node JS",
     icon: nodejs,
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     icon: javascript,
   },
   {
-    name: 'Tailwind CSS',
+    name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: 'NextJS',
+    name: "NextJS",
     icon: nextjs,
   },
   {
-    name: 'CSS 3',
+    name: "CSS 3",
     icon: css,
   },
   {
-    name: 'Redux Toolkit',
+    name: "Redux Toolkit",
     icon: redux,
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: 'Three JS',
+    name: "Three JS",
     icon: threejs,
   },
   {
-    name: 'git',
+    name: "git",
     icon: git,
   },
   {
-    name: 'Java',
+    name: "Java",
     icon: java,
   },
   {
-    name: 'docker',
+    name: "docker",
     icon: docker,
   },
 ];
@@ -138,41 +138,41 @@ export type Experience = {
 
 const experiences: Experience[] = [
   {
-    title: 'Full Stack Developer',
-    company_name: 'Agap2 - Dedagroup',
+    title: "Full Stack Developer",
+    company_name: "Agap2 - Dedagroup",
     icon: deda2,
-    iconBg: '#4f73ff',
-    date: 'May 2022 – current',
+    iconBg: "#4f73ff",
+    date: "May 2022 – current",
     points: [
-      '1st Project: the newest cloud native app on AWS to connect and manage orders between fashion brands and suppliers. App written in Java Spring for the backend with Keycloak as Oauth2 authorization server, Kafka to connect the multiple microservices and Docker to handle them, Docker to handle them, a relational database (Postgres) and React (Typescript) for the front end. This is an international project as we work with other Thoughtworks consultant from India and Tunisia.',
-      '2nd Project: another cloud native AWS application to handle our clients schedule during store visits. App authenticated via Azure and to handle different roles and visibility. Backend written in NodeJS, NestJS, and React as frontend using Typescript in both. Non-relational database, MongoDB.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      "1st Project: the newest cloud native app on AWS to connect and manage orders between fashion brands and suppliers. App written in Java Spring for the backend with Keycloak as Oauth2 authorization server, Kafka to connect the multiple microservices and Docker to handle them, Docker to handle them, a relational database (Postgres) and React (Typescript) for the front end. This is an international project as we work with other Thoughtworks consultant from India and Tunisia.",
+      "2nd Project: another cloud native AWS application to handle our clients schedule during store visits. App authenticated via Azure and to handle different roles and visibility. Backend written in NodeJS, NestJS, and React as frontend using Typescript in both. Non-relational database, MongoDB.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Perigea - Intesa San Paolo',
+    title: "Full Stack Developer",
+    company_name: "Perigea - Intesa San Paolo",
     icon: intesa,
-    iconBg: '#ff9663',
-    date: 'Sept 2021 - April 2022',
+    iconBg: "#ff9663",
+    date: "Sept 2021 - April 2022",
     points: [
-      'Working on 3 applications for investing analysis.',
-      'Working in a four-person team participating from the design to the develop of the application.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      "Working on 3 applications for investing analysis.",
+      "Working in a four-person team participating from the design to the develop of the application.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: 'Full Stack Developer - Internship',
-    company_name: 'Forge',
+    title: "Full Stack Developer - Internship",
+    company_name: "Forge",
     icon: forge,
-    iconBg: '#fff',
-    date: 'Sept 2019 - Jan 2020',
+    iconBg: "#fff",
+    date: "Sept 2019 - Jan 2020",
     points: [
-      'Web App build from scratch to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.',
-      'Built using NodeJS for the backend to store the data on a MongoDB and plain JavaScript for the front end where the Google APIs were used to draw the map and make the calculations alongside some CSS styling for the HTML.',
+      "Web App build from scratch to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.",
+      "Built using NodeJS for the backend to store the data on a MongoDB and plain JavaScript for the front end where the Google APIs were used to draw the map and make the calculations alongside some CSS styling for the HTML.",
     ],
   },
 ];
@@ -180,27 +180,27 @@ const experiences: Experience[] = [
 const testimonials = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    name: "Sara Lee",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
+    name: "Chris Brown",
+    designation: "COO",
+    company: "DEF Corp",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+    name: "Lisa Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
@@ -219,79 +219,79 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    name: 'Web Site',
+    name: "Web Site",
     description:
-      'Web-site you are currently watching to practice 3D developing and showcase my portfolio CV.',
+      "Web-site you are currently watching to practice 3D developing and showcase my portfolio CV.",
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: "react",
+        color: "blue-text-gradient",
       },
       {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
+        name: "tailwind",
+        color: "pink-text-gradient",
       },
     ],
     image: treeWebsite,
-    source_code_link: 'https://github.com/albibenni/tree-js-website',
+    source_code_link: "https://github.com/albibenni/tree-js-website",
   },
   {
-    name: 'ExLibris',
+    name: "ExLibris",
     description:
-      'Backend Book Library template with Oauth token and roles for book rental.',
+      "Backend Book Library template with Oauth token and roles for book rental.",
     tags: [
       {
-        name: 'nodeJS',
-        color: 'blue-text-gradient',
+        name: "nodeJS",
+        color: "blue-text-gradient",
       },
       {
-        name: 'nest',
-        color: 'red-text-gradient',
+        name: "nest",
+        color: "red-text-gradient",
       },
       {
-        name: 'mongoDB',
-        color: 'green-text-gradient',
+        name: "mongoDB",
+        color: "green-text-gradient",
       },
       {
-        name: 'restapi',
-        color: 'blue-text-gradient',
+        name: "restapi",
+        color: "blue-text-gradient",
       },
     ],
     image: exLibris,
-    source_code_link: 'https://github.com/albibenni/ExLibris',
+    source_code_link: "https://github.com/albibenni/ExLibris",
   },
   {
-    name: 'Coverage',
+    name: "Coverage",
     description:
-      'Web App to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.',
+      "Web App to analytically calculate the overlapping areas of geolocalized services to have a better understanding of the relationship between supply and demand.",
     tags: [
       {
-        name: 'javascript',
-        color: 'yellow-text-gradient',
+        name: "javascript",
+        color: "yellow-text-gradient",
       },
       {
-        name: 'nodeJS',
-        color: 'blue-text-gradient',
+        name: "nodeJS",
+        color: "blue-text-gradient",
       },
       {
-        name: 'mongoDB',
-        color: 'green-text-gradient',
+        name: "mongoDB",
+        color: "green-text-gradient",
       },
       {
-        name: 'googleAPI',
-        color: 'red-text-gradient',
+        name: "googleAPI",
+        color: "red-text-gradient",
       },
       {
-        name: 'restapi',
-        color: 'blue-text-gradient',
+        name: "restapi",
+        color: "blue-text-gradient",
       },
       {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: "css",
+        color: "pink-text-gradient",
       },
     ],
     image: coverage,
-    source_code_link: 'https://github.com/albibenni/Coverage',
+    source_code_link: "https://github.com/albibenni/Coverage",
   },
   // TODO: add the python amazon project
 ];
