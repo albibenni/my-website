@@ -16,8 +16,8 @@ export default function Experience() {
         &nbsp;
       </span>
       <motion.div initial="hidden" animate="visible" variants={textVariant(0)}>
-        <p className={styles.sectionSubText}>{subText}</p>
         <h3 className={styles.sectionHeadText}>Work experience</h3>
+        <p className={styles.sectionSubText}>{subText}</p>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
