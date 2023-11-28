@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
+import About from '@/components/Overview';
 import Experience from '@/components/Experience';
 import Tech from '@/components/Tech';
 import Projects from '@/components/Projects';

@@ -6,7 +6,7 @@ import { services } from '@/constants/recap';
 import ServiceCard from '@/components/ServiceCard';
 import { textVariant } from '@/utils/motion';
 
-export default function About() {
+export default function Overview() {
   const blockOfText =
     "I'm a software engineer with experience in TypeScript,\n" +
     '          JavaScript and Java and expertise in frameworks like React, Node.js, and\n' +
