@@ -40,7 +40,7 @@ export default function Navbar() {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 setActive(link.title);
-                router.push(`#${link.id}`);
+                router.push(`/${link.id}`);
               }}
             >
               <a> {link.title} </a>
