@@ -65,7 +65,7 @@ export default function Contact() {
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <span className="hash-span" id={"about"}>
+      <span className="hash-span" id={"contact"}>
         &nbsp;
       </span>
 

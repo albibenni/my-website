@@ -33,18 +33,18 @@ export default function Navbar() {
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
-            <li
+            <Link
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
+              href={`/${link.id}`}
               onClick={() => {
                 setActive(link.title);
-                router.push(`/${link.id}`);
               }}
             >
-              <a> {link.title} </a>
-            </li>
+              {link.title}
+            </Link>
           ))}
         </ul>
         {/*MOBILE*/}
@@ -63,19 +63,18 @@ export default function Navbar() {
         >
           <ul className="list-none flex justify-end items-start flex-col gap-4">
             {navLinks.map((link) => (
-              <li
+              <Link
                 key={link.id}
                 className={`${
                   active === link.title ? "text-white" : "text-secondary"
                 } font-poppins font-medium text-[16px] cursor-pointer`}
+                href={`/${link.id}`}
                 onClick={() => {
-                  setToggle((prevState) => !prevState);
                   setActive(link.title);
-                  router.push(`/${link.id}`);
                 }}
               >
-                <a> {link.title} </a>
-              </li>
+                {link.title}
+              </Link>
             ))}
           </ul>
         </div>
